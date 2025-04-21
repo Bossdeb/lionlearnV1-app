@@ -1,51 +1,87 @@
 <template>
-  <div class="bg-white  mx-50 mt-10">
-  <div class="flex items-center justify-between gap-4 px-5" data-aos="fade-up" data-aos-delay="200">
-    <div>
-      <h1 class="text-3xl font-bold">Course Catalog</h1>
-      <p class="text-xl text-gray-500">Browse and enroll in our wide range of courses</p>
+  <div class="min-h-screen bg-white">
+    <!-- Header Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="text-center md:text-left">
+          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Course Catalog</h1>
+          <p class="text-xl text-gray-500 mt-2">Browse and enroll in our wide range of courses</p>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3">
+          <div class="relative">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for a course"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
+            />
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="w-1/2">
-      <input
-        type="text"
-        name="search"
-        id="search"
-        placeholder="Search for a course"
-        class="w-full p-2 rounded-md border border-gray-300"
-      />
+
+    <!-- Courses Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          v-for="course in courses"
+          :key="course.id"
+          class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
+        >
+          <!-- Course Image -->
+          <div class="relative h-48">
+            <img
+              :src="course.image"
+              :alt="course.title"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 right-4">
+              <span class="px-3 py-1 bg-orange-500 text-white text-sm font-medium rounded-full">
+                ${{ course.price }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Course Content -->
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{{ course.title }}</h3>
+            <p class="text-gray-500 mb-4 line-clamp-2">
+              {{ course.description }}
+            </p>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                v-for="tag in course.tags"
+                :key="tag"
+                class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm"
+              >
+                {{ tag }}
+              </span>
+            </div>
+
+            <!-- Enroll Button -->
+            <button
+              class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all transform hover:scale-105"
+            >
+              Enroll Now
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="grid grid-cols-3 gap-6 mt-10" data-aos="zoom-in" data-aos-delay="200">
-  <div
-    class="flex flex-col border border-gray-300 rounded-2xl w-95  shadow-md hover:shadow-2xl transition duration-300 bg-white mx-10 px-5"
-    v-for="course in courses" :key="course.id"> 
-    <img
-      :src="course.image"
-      alt="hero-image"
-      class="w-full  object-contain mb-4 border-b-2 border-gray-300"
-    />
-    <div class="w-full flex flex-col ">  
-      <h1 class="text-xl font-bold mb-3">{{ course.title }}</h1>
-      <p class="text-m text-gray-500 mb-2 line-clamp-2">
-        {{ course.description }}
-      </p>
-      <p class="text-black mb-2 text-right text-l font-bold">
-        $ {{ course.price }}
-      </p>
-      
-    </div>
-    <button class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-4 py-2 rounded-md border-1 border-gray-300 hover:underline mb-5">
-      Enroll Now
-    </button>
-  </div>
-
-</div>
-</div>
-
 </template>
 
 <script setup>
 import { ref } from 'vue';
+
 const courses = ref([
   {
     id: 1,
@@ -96,5 +132,4 @@ const courses = ref([
     price: 1000,
   },  
 ]);
-
 </script>

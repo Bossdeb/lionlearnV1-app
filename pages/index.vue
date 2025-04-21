@@ -1,174 +1,148 @@
 <template>
-  <div class="mx-50">
-    <!-- hero section -->
-    <div class="bg-white flex items-center justify-center h-screen" data-aos="fade-up">
-      <div class="flex flex-col w-1/2">
-        <div>
-          <h1 class="text-5xl font-bold mb-5">
-            Learn at your own pace, anywhere, anytime
-          </h1>
-          <p class="text-2xl text-gray-500 mb-5">
-            Access high-quality courses, expert instructors, and a supportive
-            community to help you achieve your learning goals.
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Hero Content -->
+          <div class="text-center lg:text-left">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              Learn at your own pace, anywhere, anytime
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-500 mb-8">
+              Access high-quality courses, expert instructors, and a supportive
+              community to help you achieve your learning goals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <NuxtLink to="/courses" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all transform hover:scale-105">
+                Browse Courses
+              </NuxtLink>
+              <button class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-orange-500 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all transform hover:scale-105">
+                Learn More
+              </button>
+            </div>
+          </div>
+          
+          <!-- Hero Image -->
+          <div class="flex justify-center lg:justify-end">
+            <img
+              src="/images/logo/lionlearn_logo.png"
+              alt="hero-image"
+              class="w-full max-w-md object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 md:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Features that empower learning
+          </h2>
+          <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+            Our platform provides everything you need to create, deliver, and
+            track effective learning experiences.
           </p>
         </div>
-        <div class="flex gap-4">
-          <button
-            class="bg-gradient-to-r from-orange-500 to-amber-500 font-bold text-white px-4 py-2 rounded-md border-1 border-gray-300 hover:underline"
-          >
-            <NuxtLink to="/courses" target="_blank">
-            Browse Courses
-            </NuxtLink>
-          </button>
-          <button
-            class="bg-white font-bold text-orange-500 px-4 py-2 rounded-md border-1 border-gray-300 hover:underline"
-          >
-            Learn More
-          </button>
-        </div>
-      </div>
-      <div class="flex flex-col items-center justify-center w-1/2">
-        <img
-          src="/images/logo/lionlearn_logo.png"
-          alt="hero-image"
-          class="w-3/4 h-3/4 object-contain "
-        />
-      </div>
-    </div>
-    <div class="bg-white flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
-      <!-- featured courses -->
-      <div class="flex flex-col text-center">
-        <h1 class="text-5xl font-bold mb-5">Features that empower learning</h1>
-        <p class="text-2xl text-gray-500 mb-5">
-          Our platform provides everything you need to create, deliver, and
-          track effective learning experiences.
-        </p>
-        <div class="grid grid-cols-3 gap-4">
-          <div
-            class="flex flex-col items-center justify-center text-center border-1 border-gray-300 rounded-md w-95 h-70 mx-10 px-5"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-book-open h-12 w-12 text-primary"
-            >
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-            <h1 class="text-2xl font-bold mb-5">Rich Course Content</h1>
-            <p class="text-xl text-gray-500 mb-5">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature Card 1 -->
+          <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-lg mb-6">
+              <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Rich Course Content</h3>
+            <p class="text-gray-500">
               Support for videos, quizzes, assignments, and interactive content
               to engage learners.
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-center border-1 border-gray-300 rounded-md w-95 h-70 mx-10 px-5"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-users h-12 w-12 text-primary"
-            >
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            <h1 class="text-2xl font-bold mb-5">Collaborative Learning</h1>
-            <p class="text-xl text-gray-500 mb-5">
+
+          <!-- Feature Card 2 -->
+          <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-lg mb-6">
+              <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Collaborative Learning</h3>
+            <p class="text-gray-500">
               Discussion forums, group projects, and peer feedback to enhance
               the learning experience.
             </p>
           </div>
-          <div
-            class="flex flex-col items-center justify-center border-1 border-gray-300 rounded-md w-95 h-70 mx-10 px-5"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-bar-chart h-12 w-12 text-primary"
-            >
-              <line x1="12" x2="12" y1="20" y2="10"></line>
-              <line x1="18" x2="18" y1="20" y2="4"></line>
-              <line x1="6" x2="6" y1="20" y2="16"></line>
-            </svg>
-            <h1 class="text-2xl font-bold mb-5">Progress Tracking</h1>
-            <p class="text-xl text-gray-500 mb-5">
+
+          <!-- Feature Card 3 -->
+          <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-lg mb-6">
+              <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Progress Tracking</h3>
+            <p class="text-gray-500">
               Detailed analytics and reports to monitor student progress and
               course effectiveness.
             </p>
           </div>
         </div>
       </div>
-      <!-- end featured courses -->
-    </div>
-    <div class="bg-white flex items-center justify-center h-screen" data-aos="zoom-in" data-aos-delay="200">
-      <!-- featured courses -->
-      <div class="flex flex-col text-center">
-        <h1 class="text-5xl font-bold mb-5">Popular Courses</h1>
-        <p class="text-2xl text-gray-500 mb-5">
-          Explore our most popular courses and start your learning journey
-          today.
-        </p>
-        <div class="grid grid-cols-3 gap-6 px-10">
-  <div
-    class="flex flex-col items-center justify-center border border-gray-300 rounded-2xl w-full h-72 shadow-md hover:shadow-2xl transition duration-300 bg-white"
-    v-for="course in courses" :key="course.id"> 
-    <img
-      :src="course.image"
-      alt="hero-image"
-      class="w-full h-1/2 object-cover mb-4 border-b-2 border-gray-300"
-    />
-    <div class="w-full text-left flex flex-col h-1/2 px-5">
-      <h1 class="text-xl font-bold mb-3">{{ course.title }}</h1>
-      <p class="text-m text-gray-500 mb-2 line-clamp-2">
-        {{ course.description }}
-      </p>
-    </div>
-  </div>
+    </section>
 
-</div>
-      <div class="flex justify-center mt-10">
-        
-        <button class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-4 py-2 rounded-md border-1 border-gray-300 hover:underline">
-          <NuxtLink to="/courses" target="_blank">
-          View All Courses
+    <!-- Popular Courses Section -->
+    <section class="py-12 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Popular Courses
+          </h2>
+          <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+            Explore our most popular courses and start your learning journey today.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-for="course in courses" :key="course.id"
+            class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
+            <img
+              :src="course.image"
+              :alt="course.title"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ course.title }}</h3>
+              <p class="text-gray-500 mb-4 line-clamp-2">
+                {{ course.description }}
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span v-for="tag in course.tags" :key="tag"
+                  class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">
+                  {{ tag }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <NuxtLink to="/courses"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all transform hover:scale-105">
+            View All Courses
           </NuxtLink>
-        </button> 
-       
+        </div>
       </div>
-
-      <!-- end featured courses -->
-    </div>
-  </div>
-  
-
+    </section>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+
 const courses = ref([
   {
     id: 1,
@@ -213,7 +187,6 @@ const courses = ref([
     tags: ['Java'],
   },  
 ]);
-
 </script>
 
 <style scoped></style>
