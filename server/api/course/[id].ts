@@ -17,6 +17,13 @@ export default defineEventHandler(async (e) => {
         image: '/images/logo/lionlearn_logo.png',
         tags: ['Html', 'Css', 'Javascript'],
         price: 1000,
+        curriculum: [
+          {
+            title: 'Introduction to Web Development',
+            description: 'Learn the basics of web development',
+            duration: '1 hour',
+          },
+        ],
       },
       {
         id: 2,
