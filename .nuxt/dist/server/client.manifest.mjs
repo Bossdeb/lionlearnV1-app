@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/p/Documents/GitHub/lionlearn/app/lionlearn-app/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
