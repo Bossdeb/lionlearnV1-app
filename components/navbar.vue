@@ -21,8 +21,8 @@
       <button class="bg-white text-orange-500 px-4 py-2 rounded-md border-1 border-gray-300 hover:underline">
         <NuxtLink to="/login">Login</NuxtLink>
       </button>
-      <button class="bg-orange-500 text-white px-4 py-2 rounded-md border-1 border-gray-300 hover:underline">
-        <NuxtLink to="/login">Register</NuxtLink>
+      <button class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-4 py-2 rounded-md border-1 border-gray-300 hover:underline">
+        <NuxtLink to="/register">Register</NuxtLink>
       </button>
     </div>
   </div>

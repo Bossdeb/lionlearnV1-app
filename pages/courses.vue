@@ -22,9 +22,9 @@
     <img
       :src="course.image"
       alt="hero-image"
-      class="w-full h-1/2 object-contain mb-4 border-b-2 border-gray-300"
+      class="w-full  object-contain mb-4 border-b-2 border-gray-300"
     />
-    <div class="w-full flex flex-col h-1/2">  
+    <div class="w-full flex flex-col ">  
       <h1 class="text-xl font-bold mb-3">{{ course.title }}</h1>
       <p class="text-m text-gray-500 mb-2 line-clamp-2">
         {{ course.description }}
@@ -34,6 +34,9 @@
       </p>
       
     </div>
+    <button class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-4 py-2 rounded-md border-1 border-gray-300 hover:underline mb-5">
+      Enroll Now
+    </button>
   </div>
 
 </div>
