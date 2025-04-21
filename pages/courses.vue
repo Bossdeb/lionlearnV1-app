@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white  mx-50 mt-10">
-  <div class="flex items-center justify-between gap-4 px-5">
+  <div class="flex items-center justify-between gap-4 px-5" data-aos="fade-up" data-aos-delay="200">
     <div>
       <h1 class="text-3xl font-bold">Course Catalog</h1>
       <p class="text-xl text-gray-500">Browse and enroll in our wide range of courses</p>
@@ -15,7 +15,7 @@
       />
     </div>
   </div>
-  <div class="grid grid-cols-3 gap-6 mt-10">
+  <div class="grid grid-cols-3 gap-6 mt-10" data-aos="zoom-in" data-aos-delay="200">
   <div
     class="flex flex-col border border-gray-300 rounded-2xl w-95  shadow-md hover:shadow-2xl transition duration-300 bg-white mx-10 px-5"
     v-for="course in courses" :key="course.id"> 
@@ -46,7 +46,6 @@
 
 <script setup>
 import { ref } from 'vue';
-
 const courses = ref([
   {
     id: 1,

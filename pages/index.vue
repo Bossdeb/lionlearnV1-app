@@ -1,7 +1,7 @@
 <template>
   <div class="mx-50">
     <!-- hero section -->
-    <div class="bg-white flex items-center justify-center h-screen">
+    <div class="bg-white flex items-center justify-center h-screen" data-aos="fade-up">
       <div class="flex flex-col w-1/2">
         <div>
           <h1 class="text-5xl font-bold mb-5">
@@ -16,7 +16,9 @@
           <button
             class="bg-gradient-to-r from-orange-500 to-amber-500 font-bold text-white px-4 py-2 rounded-md border-1 border-gray-300 hover:underline"
           >
+            <NuxtLink to="/courses" target="_blank">
             Browse Courses
+            </NuxtLink>
           </button>
           <button
             class="bg-white font-bold text-orange-500 px-4 py-2 rounded-md border-1 border-gray-300 hover:underline"
@@ -33,7 +35,7 @@
         />
       </div>
     </div>
-    <div class="bg-white flex items-center justify-center">
+    <div class="bg-white flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
       <!-- featured courses -->
       <div class="flex flex-col text-center">
         <h1 class="text-5xl font-bold mb-5">Features that empower learning</h1>
@@ -121,7 +123,7 @@
       </div>
       <!-- end featured courses -->
     </div>
-    <div class="bg-white flex items-center justify-center h-screen">
+    <div class="bg-white flex items-center justify-center h-screen" data-aos="zoom-in" data-aos-delay="200">
       <!-- featured courses -->
       <div class="flex flex-col text-center">
         <h1 class="text-5xl font-bold mb-5">Popular Courses</h1>
@@ -167,7 +169,6 @@
 
 <script setup>
 import { ref } from 'vue';
-
 const courses = ref([
   {
     id: 1,
